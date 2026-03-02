@@ -1,0 +1,25 @@
+﻿<Window x:Class="_423_Prasolova.Page2"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Разветвляющийся алгоритм">
+    <StackPanel Margin="20">
+        <Image Source="/Images/formula2.png" Height="100"/>
+        <Label Content="Введите X:"/>
+        <TextBox Name="txtX"/>
+        <Label Content="Введите Y:"/>
+        <TextBox Name="txtY"/>
+
+        <GroupBox Header="Выберите f(x)" Margin="0,10">
+            <StackPanel>
+                <RadioButton Name="rbSh" Content="sh(x)" IsChecked="True"/>
+                <RadioButton Name="rbSquare" Content="x²"/>
+                <RadioButton Name="rbExp" Content="eˣ"/>
+            </StackPanel>
+        </GroupBox>
+
+        <Label Content="Результат D:"/>
+        <TextBox Name="txtRes" IsReadOnly="True" Background="#EEE"/>
+
+        <Button Content="Вычислить" Click="BtnCalc_Click" Margin="0,10"/>
+    </StackPanel>
+    </Window>
