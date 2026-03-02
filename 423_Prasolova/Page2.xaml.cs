@@ -25,7 +25,7 @@ namespace _423_Prasolova
                 double fx = rbSh.IsChecked == true ? Math.Sinh(x) : (rbSquare.IsChecked == true ? x * x : Math.Exp(x));
                 double d;
 
-                if (x > y) d = Math.Pow(fx - y, 3) + Math.Atan(fx); // [cite: 89]
+                if (x > y) d = Math.Pow(fx - y, 3) + Math.Atan(fx); 
                 else if (y > x) d = Math.Pow(y - fx, 3) + Math.Atan(fx);
                 else d = Math.Pow(y + fx, 3) + 0.5;
 
