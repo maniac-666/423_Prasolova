@@ -4,7 +4,7 @@
       Title="Линейный алгоритм">
     <StackPanel Margin="20">
         <TextBlock Text="Вариант 4: Линейный расчет" FontSize="18" Margin="0,0,0,10"/>
-        <Image Source="formula1.png" Height="60" HorizontalAlignment="Left" ToolTip="C:\Users\ekate\Source\Repos\423_Prasolova\423_Prasolova\Images\formula1.png" Width="237"/>
+        <Image Source="/Images/formula1.png" Height="100"/>
         <Label Content="Введите X:"/>
         <TextBox Name="txtX" ToolTip="Введите вещественное число x"/>
         <Label Content="Введите Y:"/>
