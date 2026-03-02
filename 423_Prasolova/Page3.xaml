@@ -11,6 +11,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
+            <Image Source="/Images/formula3.png" Height="50" Margin="0,0,0,10"/>
             <Label Content="x0:"/>
             <TextBox Name="txtX0" Text="-0,75"/>
             <Label Content="xk:"/>
@@ -21,7 +22,6 @@
             <TextBox Name="txtA" Text="1,0"/>
             <Label Content="b:"/>
             <TextBox Name="txtB" Text="0,5"/>
-
             <Button Content="Вычислить" Click="BtnCalc_Click" Margin="0,10"/>
             <Label Content="Лог расчетов:"/>
             <TextBox Name="txtLog" Height="150" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
