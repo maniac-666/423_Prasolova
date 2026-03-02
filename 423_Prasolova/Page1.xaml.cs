@@ -20,7 +20,7 @@ namespace _423_Prasolova
 
         private void BtnCalc_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(txtX.Text, out double x) && double.TryParse(txtY.Text, out double y) && double.TryParse(txtZ.Text, out double z)) // [cite: 158]
+            if (double.TryParse(txtX.Text, out double x) && double.TryParse(txtY.Text, out double y) && double.TryParse(txtZ.Text, out double z)) 
             {
                 double part1 = Math.Pow(Math.Abs(Math.Cos(x) - Math.Cos(y)), (1 + 2 * Math.Pow(Math.Sin(y), 2)));
                 double part2 = 1 + z + Math.Pow(z, 2) / 2 + Math.Pow(z, 3) / 3 + Math.Pow(z, 4) / 4;
