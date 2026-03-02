@@ -17,7 +17,7 @@ using System.Windows.Controls;
 using System.Windows.Forms.DataVisualization.Charting; 
 namespace _423_Prasolova
 {
-    public partial class Page3 : Page
+    public partial class Page3 : Window
     {
         public Page3()
         {

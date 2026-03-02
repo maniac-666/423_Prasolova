@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace _423_Prasolova
 {
-    public partial class Page2 : Page
+    public partial class Page2 : Window
     {
         public Page2() => InitializeComponent();
 
