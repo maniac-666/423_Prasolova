@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_423_Prasolova"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="PR4" Height="450" Width="800">
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
+        <StackPanel Background="#F0F0F0">
+            <Button Content="Задание 1" Click="BtnPage1_Click" Margin="5" ToolTip="Линейный алгоритм"/>
+            <Button Content="Задание 2" Click="BtnPage2_Click" Margin="5" ToolTip="Разветвляющийся алгоритм"/>
+            <Button Content="Задание 3" Click="BtnPage3_Click" Margin="5" ToolTip="Циклический алгоритм и график"/>
+        </StackPanel>
+
+        <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
