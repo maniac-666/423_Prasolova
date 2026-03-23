@@ -1,29 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms.DataVisualization.Charting; 
+using System.Windows.Forms.DataVisualization.Charting;
+
 namespace _423_Prasolova
 {
+    /// <summary>
+    /// Страница 3: Циклический алгоритм.
+    /// Табулирует функцию y = ax³ + cos²(x³ - b) и строит график.
+    /// </summary>
     public partial class Page3 : Page
     {
+        /// <summary>
+        /// Инициализация компонентов страницы.
+        /// </summary>
         public Page3()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки «Рассчитать».
+        /// Табулирует функцию от x0 до xk с шагом dx и строит график.
+        /// </summary>
         private void BtnCalc_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -45,8 +44,7 @@ namespace _423_Prasolova
 
                 for (double x = x0; (dx > 0 ? x <= xk : x >= xk); x += dx)
                 {
-                    double y = a * Math.Pow(x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2);
-
+                    double y = Formuler.Formula3(a, x, b);
                     txtLog.AppendText($"x={x:F2}; y={y:F4}\n");
                     series.Points.AddXY(x, y);
                 }
