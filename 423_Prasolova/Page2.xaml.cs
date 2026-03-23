@@ -1,37 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace _423_Prasolova
 {
+    /// <summary>
+    /// Страница 2: Разветвляющийся алгоритм.
+    /// Вычисляет d в зависимости от f(x) и соотношения x и y.
+    /// </summary>
     public partial class Page2 : Page
     {
+        /// <summary>
+        /// Инициализация компонентов страницы.
+        /// </summary>
         public Page2() => InitializeComponent();
 
+        /// <summary>
+        /// Обработчик нажатия кнопки «Рассчитать».
+        /// Определяет тип функции по RadioButton и вычисляет результат.
+        /// </summary>
         private void BtnCalc_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(txtX.Text, out double x) && double.TryParse(txtY.Text, out double y))
+            if (double.TryParse(txtX.Text, out double x) &&
+                double.TryParse(txtY.Text, out double y))
             {
-                double fx = rbSh.IsChecked == true ? Math.Sinh(x) : (rbSquare.IsChecked == true ? x * x : Math.Exp(x));
-                double d;
+                int funcType = rbSh.IsChecked == true ? 1 :
+                               (rbSquare.IsChecked == true ? 2 : 3);
 
-                if (x > y) d = Math.Pow(fx - y, 3) + Math.Atan(fx); 
-                else if (y > x) d = Math.Pow(y - fx, 3) + Math.Atan(fx);
-                else d = Math.Pow(y + fx, 3) + 0.5;
-
+                double d = Formuler.Formula2(funcType, x, y);
                 txtRes.Text = d.ToString("F4");
             }
-            else MessageBox.Show("Некорректный ввод!");
+            else
+            {
+                MessageBox.Show("Некорректный ввод!");
+            }
         }
     }
 }
